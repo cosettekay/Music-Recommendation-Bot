@@ -1,0 +1,14 @@
+version: '3.0'
+services:
+  rasa:
+    image: rasa/rasa:3.6.2-full
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command:
+      - run
+  action_server:
+    image: my_action_image
+    ports:
+      - 5055:5055
