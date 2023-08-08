@@ -1,14 +1,208 @@
 version: "3.1"
 
 nlu:
-- intent: songs
+- intent: recommend_music
   examples: |
     - songs
     - music
     - recommend me songs
+    - recommend me some music
     - i like music
-    - i love bts music
+    - i want song recommendations
+    - i want music recommendations
+    - i want new songs
+    - i want to listen to some music
 
+- intent: emotion_happy
+  examples: |
+    - I am happy
+    - I feel great
+    - I'm fine
+    - I had a great day
+    - Me, wonderful!
+    - I am amazed
+    - You are too cool
+    - I am loving it
+    - I am starting to like this
+    - I am feeling great
+    - Doing fine
+    - Never better
+    - Feeling lucky
+    - All great here
+    - Fantastic day
+    - What a great day
+    - I'm inspired
+    - It's perfect
+    - amazing
+    - I feel wonderful
+    - I am feeling very good
+    - I am great
+    - I'm good
+    - I'm feeling awesome
+    - I'm feeling happy
+    - Today is an awesome day!
+    - I'm so glad
+    - I'm just really happy right now
+
+- intent: emotion_sad
+  examples: |
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - my day was horrible
+    - This is bad
+    - I am sick
+    - I am ill
+    - I am all low today
+    - Its dissapointing
+    - How irritating it is
+    - Am irritated
+    - I am not feeling well
+    - This sucks!
+    - I am feeling too bad
+    - Worst day ever!
+    - This feels bad
+    - I feel low
+    - Everything is bad today
+    - I feel very sad
+    - Feels horrible
+    - This is depressing
+    - I am depressed
+    - I feel bored
+    - I am feeling bored
+    - life is boring
+    - I am feeling empty
+    - I feel useless
+    - aweful
+    - depressed
+    - heavy
+    - I am feeling quite lost
+    - very sad
+    - unhappy
+    - bad
+    - very bad
+    - awful
+    - terrible
+    - not very good
+    - extremely sad
+    - so sad
+    - Im feeling down
+    - I'm feeling sad
+    - Im feeling sad
+    - Im not okay
+    - Im feeling low
+    - Not good
+    - I'm awful
+    - I'm feeling very sad
+    - I'm uneasy
+    - Actually I'm not fine
+    - I'm not good
+    - I am as lonely as can be
+    - I am going through a rather rough time
+    - I'm grieving
+    - lol depressed
+
+- intent: emotion_angry
+  examples: |
+    - I am angry
+    - I am feeling so angry
+    - I am so annoyed
+    - It's annoying
+    - That's aggravating
+    - I'm furious
+    - That is infuriating
+    - I'm very mad
+    - Everything vexes me
+    - I am outraged
+    - That is outrageous!
+    - I feel hostile
+    - I am very frustrated
+    - It is irritating me
+    - I feel so offended
+    - I am full of fury
+    - I feel very belligerent
+    - I hate doing this
+    - I have no patience today
+    - I could not control my anger
+    - I’m annoyed
+    - I’m super annoyed
+    - I’m so mad.
+    - I'm enraged
+    - I’m straight up angry.
+    - This is maddening!
+    - I'm pissed off
+    - I'm pissed
+    - You bet I'm angry
+    - That made me angry
+    - U made me angry
+    - I'm still angry about that
+    - grr
+
+- intent: emotion_calm
+  examples: |
+    - I am calm
+    - I am serene
+    - I am full of calmness
+    - I am full of serenity
+    - I am peaceful
+    - I am full of peace
+    - inner peace
+    - my emotions are placated
+    - im feeling calm
+    - can you suggest some calm music?
+    - feeling serene
+    - im in a calm state of mind
+    - im feeling peaceful
+    - chill as a cucumber
+    - i am zen
+    - i am the epitome of meditation
+    - i am tranquil
+
+- intent: emotion_relaxed
+  examples: |
+    - I am relaxed
+    - i feel like im on vacation in the bahamas
+    - i am mellow
+    - i feel mellow
+
+- intent: emotion_excited
+  examples: |
+    - I am excited
+    - I'm really excited
+    - I can't begin to say how excited I am
+    - I'm thrilled
+    - I'm damn excited
+    - I'm hyped
+    - I'm very excited
+    - I felt excited
+    - It was exciting
+    - That was exciting
+    - How exciting!
+    - This is so fun
+    - im enthusiastic
+    - im ecstatic
+    - im thrilled
+    - im pumped
+    - im energetic
+
+
+- intent: emotion_emotional
+  examples: |
+    - I'm so emotional
+    - I am full of angst
+    - my parents don't love me
+    - the one that got away
+    - cry cry for me
+    - i am forever alone
+    - my life is over
+    - i have no friends
+    - i didn't get the crown, save the town and Mr. Kraaaaabs
+    - i just finished watching a kdrama
+    - im cutting onions
+
+
+
+#default
 - intent: greet
   examples: |
     - hey
@@ -17,7 +211,7 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - moin
+    - morning
     - hey there
     - let's go
     - hey dude
@@ -56,40 +250,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
 
 - intent: bot_challenge
   examples: |
