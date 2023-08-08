@@ -2,13 +2,24 @@ version: '3.0'
 services:
   rasa:
     image: rasa/rasa:3.6.2-full
-    ports:
-      - 5005:5005
     volumes:
-      - ./:/app
-    command:
-      - run
-  action_server:
-    image: my_action_image
+      - .:/app
     ports:
-      - 5055:5055
+      - "5005:5005"
+    networks:
+      - my-project
+    command: shell
+    stdin_open: true
+    tty: true
+
+  action-server:
+    image: my_action_image
+    volumes:
+      - ./actions:/app/actions
+    networks:
+      - my-project
+    container_name: action-server
+
+networks:
+  my-project:
+    driver: bridge
