@@ -2,36 +2,100 @@ version: "3.1"
 
 stories:
 
-- story: song path
+- story: recommend happy music path
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: songs
-  - action: action_get_emotion_tags
-
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: recommend_music
+  - action: utter_emotion_query
+  - intent: emotion_happy
+  - action: action_get_happy_tracks
+  - action: utter_more_recs
   - intent: affirm
-  - action: utter_happy
+  - action: action_get_randHappy_tracks
 
-- story: sad path 2
+
+
+- story: recommend sad music path
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: recommend_music
+  - action: utter_emotion_query
+  - intent: emotion_sad
+  - action: action_get_sad_tracks
+  - action: utter_more_recs
+  - intent: affirm
+  - action: action_get_randSad_tracks
+
+
+- story: recommend angry music path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: recommend_music
+  - action: utter_emotion_query
+  - intent: emotion_angry
+  - action: action_get_angry_tracks
+  - action: utter_more_recs
+  - intent: affirm
+  - action: action_get_randAngry_tracks
+
+
+- story: recommend calm music path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: recommend_music
+  - action: utter_emotion_query
+  - intent: emotion_calm
+  - action: action_get_calm_tracks
+  - action: utter_more_recs
+  - intent: affirm
+  - action: action_get_randCalm_tracks
+
+
+- story: recommend relaxed music path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: recommend_music
+  - action: utter_emotion_query
+  - intent: emotion_relaxed
+  - action: action_get_relaxed_tracks
+  - action: utter_more_recs
+  - intent: affirm
+  - action: action_get_randRelaxed_tracks
+
+
+- story: recommend excited music path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: recommend_music
+  - action: utter_emotion_query
+  - intent: emotion_excited
+  - action: action_get_excited_tracks
+  - action: utter_more_recs
+  - intent: affirm
+  - action: action_get_randExcited_tracks
+  
+
+- story: recommend emotional music path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: recommend_music
+  - action: utter_emotion_query
+  - intent: emotion_emotional
+  - action: action_get_emotional_tracks
+  - action: utter_more_recs
+  - intent: affirm
+  - action: action_get_randEmotional_tracks
+
+
+- story: no more music path
+  steps:
+  - checkpoint: utter_more_recs
   - intent: deny
   - action: utter_goodbye

@@ -5,10 +5,25 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
-  - songs
+
+#custom
+  - recommend_music
+  - emotion_happy
+  - emotion_sad
+  - emotion_angry
+  - emotion_calm
+  - emotion_relaxed
+  - emotion_excited
+  - emotion_emotional
+
+  - recommend_more_happy
+  - recommend_more sad
+  - recommend_more_angry
+  - recommend_more_calm
+  - recommend_more_relaxed
+  - recommend_more_excited
+  - recommend_more_emotional
 
 responses:
   utter_greet:
@@ -30,8 +45,40 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_emotion_query:
+  - text: "What emotion are you feeling right now?"
+
+  utter_more_recs:
+  - text: "Would you like more recommendations?"
+
 actions:
-  - action_get_emotion_tags
+#get emotion tracks
+  - action_get_emotion_tracks
+
+  - action_get_happy_tracks
+  - action_get_sad_tracks
+  - action_get_angry_tracks
+  - action_get_calm_tracks
+  - action_get_relaxed_tracks
+  - action_get_excited_tracks
+  - action_get_emotional_tracks
+
+#get random_emotion tracks
+  - action_get_random_tracks
+
+  - action_get_randHappy_tracks
+  - action_get_randSad_tracks
+  - action_get_randAngry_tracks
+  - action_get_randCalm_tracks
+  - action_get_randRelaxed_tracks
+  - action_get_randExcited_tracks
+  - action_get_randEmotional_tracks
+
+# slots:
+#   dummy_slot:
+#     type: text
+#     mappings:
+#       - type: from_text
 
 session_config:
   session_expiration_time: 60
